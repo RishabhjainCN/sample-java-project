@@ -48,12 +48,16 @@ public class SampleJavaProject implements Runnable {
                 return;
             }
         } catch (ParameterException e) {
-            System.err.println("error: " + e.getMessage());
-            new JCommander(new SampleJavaProject()).usage();
-            System.exit(-1);
+            method(e);
         }
 
         sjp.run();
+    }
+
+    private static void method(ParameterException e) {
+        System.err.println("error: " + e.getMessage());
+        new JCommander(new SampleJavaProject()).usage();
+        System.exit(-1);
     }
 
     /**

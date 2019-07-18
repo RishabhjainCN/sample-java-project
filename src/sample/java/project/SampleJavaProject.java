@@ -64,7 +64,8 @@ public class SampleJavaProject implements Runnable {
     }
 
     @Override
-    public final void run() {
+    public final void run() {sudo gem install fusuma
+
         do {
             sayHello();
             try {
